@@ -399,8 +399,9 @@ p31<-xyplot(I(NPMIN+NPORG)~NSOIL,df0,groups=SIM,
               panel.abline(a=0,b=1)})
 
 #P budget for the ecosystem
-p32<-xyplot(I(PDEP+PWEA-PLEACH)~(I(deltaPL+deltaPW+deltaPCR+deltaPFR+deltaPSOIL+deltaPFLIT+deltaPCLITB)),df0,groups=SIM,
-            main='I(PDEP+PWEA-PLEACH)~(I(deltaPL+deltaPW+deltaPCR+deltaPFR+deltaPSOIL',auto.key=T,
+# P dep enters parent pool and then gets weathered, so removed pdep
+p32<-xyplot(I(PWEA-PLEACH)~(I(deltaPL+deltaPW+deltaPCR+deltaPFR+deltaPSOIL+deltaPFLIT+deltaPCLITB)),df0,groups=SIM,
+            main='I(PWEA-PLEACH)~(I(deltaPL+deltaPW+deltaPCR+deltaPFR+deltaPSOIL',auto.key=T,
             scales=list(relation='free'),
             panel=function(...){
               panel.xyplot(...)
@@ -458,7 +459,8 @@ p39<-xyplot(I(PUP+PLRETR+PWRETR+PFRRETR+PCRRETR-PGL-PGFR-PGCR-PGW)~deltaPSTOR,df
               panel.xyplot(...)
               panel.abline(a=0,b=1)})
 
-p40<-xyplot(I(PDEP+PWEA+PLITIN+PWLIN+PCRLIN+PFRLIN-PUP-PLEACH)~I(deltaPSOIL+deltaPFLIT+deltaPCLITB),df0,groups=SIM,
+# taken out P dep
+p40<-xyplot(I(PWEA+PLITIN+PWLIN+PCRLIN+PFRLIN-PUP-PLEACH)~I(deltaPSOIL+deltaPFLIT+deltaPCLITB),df0,groups=SIM,
             main='PLITIN+PWLIN+PCRLIN+PFRLIN-PUP-PLEACH~I(deltaPSOIL+deltaPFLIT+deltaPCLITB)',auto.key=T,
             scales=list(relation='free'),
             panel=function(...){
