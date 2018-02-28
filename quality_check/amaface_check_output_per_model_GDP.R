@@ -16,11 +16,11 @@ modcod<-"GDP"
 # READING and FORMATTING ----------------------------------------------------------------------------
 
 # upload file with output names, units and type of output variable
-setwd("~/Documents/Research/Projects/Amazon/AMAZ")
+setwd("~/Documents/Research/Projects/Amazon/AMAZ_new")
 units<-readRDS("units_frame.rds")
 
 # set working directory to path where your output sits (this is mine)
-setwd("~/Documents/Research/Projects/Amazon/AMAZ/drought_p/outputs")
+setwd("~/Documents/Research/Projects/Amazon/AMAZ_new/drought_p/outputs")
 
 
 # #alternatively upload csv file and format (uncommented here)
